@@ -48,9 +48,9 @@ print(b_follower)
 
 score = 0
 
-game_restart = True
+game_restart = False
 
-while game_restart:
+while not game_restart:
 
     guess = input("Who has more followers? Type 'A' or 'B': ").lower()
     if (a_follower > b_follower and guess == "a") or (a_follower < b_follower
@@ -89,4 +89,4 @@ while game_restart:
         clear()
         print(logo)
         print(f"Sorry, that's wrong. Final score: {score}")
-        break
+        game_restart = True
